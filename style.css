@@ -1,0 +1,78 @@
+body {
+    font-family: Arial;
+    font-weight: 500;
+    background-color: #303030!important;
+}
+
+#menu {
+    width: 230px;
+    height: 100%;
+    background-color: #262626    ;
+    position: fixed;
+    top: 0px;
+    left: -250px;
+    transition: left 0.5s;
+    z-index: 3;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+}
+
+#menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition-property: font-size color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    font-size: 20px;
+}
+
+#menu ul li a:hover{
+    color: rgb(253, 206, 118);
+    font-size: 21px;
+}
+
+.cart-icon{
+    margin-right: 5px;
+}
+
+#content {
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+#menu-toggle {
+    position: fixed;
+    top: 8px;
+    left: 10px;
+    cursor: pointer;
+    color: #333;
+    font-size: px;
+    z-index: 3;
+    color: whitesmoke;
+    transition-property: transform background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    height: 48px;
+    width: 50px;
+    border: 1px solid #353535;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle:hover{
+    transform: rotate(45deg);
+    background-color: #404040;
+}

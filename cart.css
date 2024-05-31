@@ -1,0 +1,283 @@
+.shopping-cart{
+	padding-bottom: 50px;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	background-color: #303030;
+}
+
+.shopping-cart.dark{
+	background-color: #303030;
+}
+
+.shopping-cart .content{
+	background-color: #303030;
+}
+
+.shopping-cart .block-heading{
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.shopping-cart .block-heading p{
+	text-align: center;
+	max-width: 420px;
+	margin: auto;
+	opacity:0.7;
+}
+
+.shopping-cart .dark .block-heading p{
+	opacity:0.8;
+}
+
+.shopping-cart .block-heading h1,
+.shopping-cart .block-heading h2,
+.shopping-cart .block-heading h3 {
+	margin-bottom:1.2rem;
+	color: rgb(253, 206, 118);
+}
+
+.shopping-cart .items{
+	margin: auto;
+}
+
+.shopping-cart .items .product{
+	margin-bottom: 20px;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    border-radius: 10px;
+	background-color: #404040;
+	color: white;
+}
+
+.shopping-cart .items .product .info{
+	padding-top: 0px;
+	text-align: center;
+}
+
+.shopping-cart .items .product .info .product-name{
+	font-weight: 600;
+}
+
+.shopping-cart .items .product .info .product-name .product-info{
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.shopping-cart .items .product .info .product-name .product-info .value{
+	font-weight: 400;
+}
+
+.shopping-cart .items .product .info .quantity .quantity-input{
+    margin: auto;
+    width: 80px;
+}
+
+.quantity{
+	margin-top: 30px;
+}
+
+.product-name{
+	width: 520px;
+}
+
+.image{
+	padding: 3px;
+	border-radius: 10px;
+}
+
+.photo{
+	padding-right: 0px;
+}
+
+
+.button{
+	background-image: url(./img/trash.svg);
+	background-repeat: no-repeat;
+	background-size: 34px;
+	width: 35px;
+	height: 40px;
+	background-color: #303030;
+	border-radius: 10px;
+	border: 1px solid #303030;
+	float: right;
+	position: relative;
+	right: 130px;
+	top: 20px;
+}
+
+#footer{
+	margin-bottom: 0px;
+}
+
+.shopping-cart .items .product .info .price{
+	margin-top: 40px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.shopping-cart .summary{
+    background-color: #f7fbff;
+    height: 97%;
+    padding: 30px;
+	border-radius: 20px;
+}
+
+.shopping-cart .summary h3{
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: 600;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.shopping-cart .summary .summary-item:not(:last-of-type){
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgb(192, 174, 125);
+}
+
+.shopping-cart .summary .text{
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.shopping-cart .summary .price{
+	font-size: 1em;
+	float: right;
+}
+
+.shopping-cart .summary button{
+	margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+	.shopping-cart .items .product .info {
+		padding-top: 25px;
+		text-align: left; 
+	}
+
+	.shopping-cart .items .product .info .price {
+		font-weight: bold;
+		font-size: 22px;
+		top: 17px; 
+	}
+
+	.shopping-cart .items .product .info .quantity {
+		text-align: center; 
+	}
+	.shopping-cart .items .product .info .quantity .quantity-input {
+		padding: 4px 10px;
+		text-align: center; 
+	}
+
+	.info{
+		width: 520px;
+	}
+}
+
+@media(max-width: 1200px){
+	.info{
+		width: 100%;
+	}
+
+	.product-name{
+		width: 450px;
+	}
+}
+
+@media(min-width: 768px) and (max-width: 1200px){
+	.button{
+		position: relative;
+		bottom: 30px;
+		left: 20px;
+	}
+}
+
+@media(min-width: 1000px) and (max-width: 1200px){
+	.product-name{
+		width: 420px;
+	}
+
+	.button{
+		position: relative;
+		top: -5px;
+		left: -105px;
+	}
+
+	.price{
+		position: relative;
+		left: 30px;
+	}
+}
+
+@media(max-width: 768px) and (min-width: 430px){
+	.photo{
+		padding-right: 15px;
+	}
+
+	.shopping-cart .items .product{
+		margin-bottom: 20px;
+		border-right: 2px solid orange;
+		border-top: 2px solid orange;
+		border-left: 2px solid orange;
+		border-bottom: none;
+		border-radius: 10px;
+	}
+
+	.product-name{
+		width: 100%;
+	}
+
+	.button{
+		position: relative;
+		top: 100px;
+		right: 28%;
+	}
+}
+
+@media(max-width: 430px){
+	.info{
+		width: 100%;
+	}
+
+	.product-name{
+		width: 100%;
+	}
+
+	.button{
+		position: relative;
+		top: 60px;
+		right: 110px;
+	}
+
+	.quantity{
+		margin-top: -10px;
+	}
+
+	.photo{
+		padding-right: 15px;
+	}
+
+	.shopping-cart .items .product{
+		margin-bottom: 20px;
+		border-right: 2px solid orange;
+		border-top: 2px solid orange;
+		border-left: 2px solid orange;
+		border-bottom: none;
+		border-radius: 10px;
+	}
+
+}
+
+@media(max-width: 400px){
+	.button{
+		position: relative;
+		top: 60px;
+		right: 19%;
+	}
+}
