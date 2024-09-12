@@ -1,4 +1,6 @@
 <?php
+  session_start();
+
   $connect = new mysqli('sql113.lh.pl', 'serwer244499', 'Kamil123#$#', 'serwer244499_geek');
   if ($connect->connect_error)
       echo "Error" . $connect;
@@ -6,19 +8,23 @@
   if(isset($_GET['submit'])){
     $email = $_GET['email'];
     $password = $_GET['password'];
-  
+
     $query = "SELECT * FROM users WHERE email=? AND password=?";
     $stmt = $connect->prepare($query);
     $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $result = $stmt->get_result();  
-  
+
     $row = $result->fetch_object();
     $tempEmail = $row->email;
     $tempPassword = $row->password;
 
     if($email==$tempEmail && $password==$tempPassword){
       echo "You have successfully logged in";
+      header("location: index-logged.php");
+    }
+    else{
+      echo "Wrong email or password";
     }
   }
 ?>
@@ -72,7 +78,7 @@
             </div>
             
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="submit" class="btn btn-warning btn-lg" name="submit"
+              <button type="submit" class="btn btn-warning btn-lg" name="submit" value="$_SESSION['loggedin']"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Did you forgot your password? <a href="./passwordReset.php"
                   class="link-danger">Reset</a></p>

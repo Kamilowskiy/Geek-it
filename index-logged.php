@@ -1,26 +1,28 @@
+<?php require_once('phpSrc.php'); ?>
 <?php
-  require_once('phpSrc.php');
-  session_start();
+session_start();
 
-  if (isset($_POST['add'])) {
-    $id_produktu = $_POST['product_id'];
+if (isset($_POST['add'])) {
+	$id_produktu = $_POST['product_id'];
 
-    if (isset($_SESSION['cart'][$id_produktu])) {
-      // Produkt już istnieje w koszyku zwieksz ilość
-      $_SESSION['cart'][$id_produktu]['quantity']++;
-      header("Location: cart.php");
-    } else {
-      // Dodaj do koszyka
-      $_SESSION['cart'][$id_produktu] = array(
-        'id_produktu' => $id_produktu,
-        'quantity' => 1
-      );
-      header("Location: cart.php");
-    }
-  }
+	if (isset($_SESSION['cart'][$id_produktu])) {
+		// Produkt już istnieje w koszyku, zwiększ ilość
+		$_SESSION['cart'][$id_produktu]['quantity']++;
+		header("Location: cart.php");
+	} 
+  else {
+		// Dodaj do koszyka
+		$_SESSION['cart'][$id_produktu] = array(
+			'id_produktu' => $id_produktu,
+			'quantity' => 1
+		);
+		header("Location: cart.php");
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +37,7 @@
   <script type="text/javascript" src="./script.js"></script>
   <title>Geek-it</title>
 </head>
+
 <body>
   <div id="div">
     <header class="mb-4 bg-dark">
@@ -42,7 +45,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4 d-flex justify-content-center justify-content-md-start justify-content-xl-start mb-3 mb-md-0">
-              <a href="./index.php" class="ms-md-3">
+              <a href="./index-logged.php" class="ms-md-3">
                 <img src="./img/geekit_orange_logo_white_text.png" height="35" />
               </a>
             </div>
@@ -96,7 +99,8 @@
             <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
               <div class="d-flex">
                 <a class="text-white me-5" href="./login.php">
-                  <span><i class="fa-solid fa-user">Sign in</i></span>
+                  <span><i class="fa-solid fa-user display-5"></i></span>
+                  <!-- <span class="badge rounded-pill badge-notification bg-danger">1</span> -->
                 </a>
               </div>
             </div>
@@ -107,6 +111,8 @@
       <nav id="menu">
         <ul>
           <li><a href="./cart.php"><i class="fa-solid fa-cart-shopping cart-icon"></i>Cart</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
 
@@ -178,11 +184,11 @@
       ?>
     </div>
   </main>
-  
   <footer class="py-3 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Geek-it 2024</p>
     </div>
   </footer>
 </body>
+
 </html>

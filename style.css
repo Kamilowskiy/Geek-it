@@ -76,3 +76,39 @@ body {
     transform: rotate(45deg);
     background-color: #404040;
 }
+
+#cart-add{
+	width: 50px;
+	height: 35px;
+	background-color: #303030;
+    font-size: 20px;
+    color: white;
+    border: 1px solid #303030;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+}
+
+#cart-add:hover{
+    background-color: rgb(255, 196, 0);
+    border: 1px solid rgb(255, 196, 0);
+}
+
+.cart-add-product{
+	width: 70px;
+	height: 35px;
+	background-color: rgb(255, 196, 0);
+    font-size: 20px;
+    color: white;
+    border: 1px solid rgb(255, 196, 0);
+    margin-top: 5px;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+}
+
+.cart-add-product:hover{
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+
+footer{
+    border-top: 1px solid black;
+}

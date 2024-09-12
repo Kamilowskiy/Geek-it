@@ -78,7 +78,15 @@ body{
 }
 
 .quantity{
-	margin-top: 30px;
+	margin-left: 75px;
+	margin-top: -80px;
+	padding: 0;
+}
+
+.price2{
+	margin-top: -50px;
+	font-size: 30px;
+	font-weight: bold;
 }
 
 .product-name{
@@ -94,20 +102,20 @@ body{
 	padding-right: 0px;
 }
 
+#description{
+	font-size: 20px;
+}
 
-.button{
+.remove{
 	background-image: url(./img/trash.svg);
 	background-repeat: no-repeat;
-	background-size: 34px;
-	width: 35px;
-	height: 40px;
+	background-size: 45px;
+	width: 45px;
+	height: 50px;
 	background-color: #303030;
 	border-radius: 10px;
 	border: 1px solid #303030;
-	float: right;
-	position: relative;
-	right: 130px;
-	top: 20px;
+	margin-top: 35px;
 }
 
 #footer{
@@ -115,7 +123,6 @@ body{
 }
 
 .shopping-cart .items .product .info .price{
-	margin-top: 40px;
     font-weight: bold;
     font-size: 22px;
 }
@@ -205,7 +212,7 @@ body{
 
 	.button{
 		position: relative;
-		top: -5px;
+		/* top: -5px; */
 		left: -105px;
 	}
 
@@ -251,8 +258,8 @@ body{
 
 	.button{
 		position: relative;
-		top: 60px;
-		right: 110px;
+		top: 70px;
+		right: 130px;
 	}
 
 	.quantity{

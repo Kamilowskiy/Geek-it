@@ -13,6 +13,7 @@
       $query = $connect->prepare("INSERT INTO users (email, password, verification_token) VALUES(?, ?, ?)");
       $query->bind_param("sss", $email, $password, $verification_token);
       $query->execute();
+      echo "You have successfully registered";
     }
   }
 ?>
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="./login.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Register</title>
+    <title>Registration</title>
 </head>
 <body>
   <section class="vh-100 bg-dark text-white">
@@ -42,31 +43,33 @@
           
         <form method="get">
 
-            <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="email" id="form3Example3" class="form-control form-control-lg"
                 placeholder="Enter email address" name="email" />
               <label class="form-label" for="form3Example3">Email address</label>
             </div>
 
-            <!-- Password input -->
             <div class="form-outline mb-3">
               <input type="password" id="form3Example4" class="form-control form-control-lg"
                 placeholder="Enter password" name="password" />
               <label class="form-label" for="form3Example4">Password</label>
             </div>
 
-            <!-- Password confirm input -->
             <div class="form-outline mb-3">
               <input type="password" id="form3Example4" class="form-control form-control-lg"
                 placeholder="Confirm password" name="passwordConfirm" />
               <label class="form-label" for="form3Example4">Confirm Password</label>
             </div>
             
-            <!-- Register button -->
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="submit" class="btn btn-warning btn-lg" action=""
                 style="padding-left: 2.5rem; padding-right: 2.5rem;" name="submit">Register</button>
+            </div>
+
+
+            <div class="text-center text-lg-start ">
+              <p class="small fw-bold mt-2 pt-1 mb-0">You already have account? <a href="./login.php"
+                  class="link-danger">Log in</a></p>
             </div>
           </form>
         </div>
